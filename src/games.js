@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync';
+/* import readlineSync from 'readline-sync';
 
 export function oddEven(name) {
   let successCounter = 0;
@@ -28,4 +28,4 @@ export function oddEven(name) {
   }
   console.log(`Let\'s try again, ${name}`);
   return false;
-}
+} */
