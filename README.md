@@ -3,3 +3,6 @@
 
 ### Codeclimate
 [![Maintainability](https://api.codeclimate.com/v1/badges/ded8b42c1766373df13d/maintainability)](https://codeclimate.com/github/sibgatullin-i/frontend-project-44/maintainability)
+
+### brain-even
+Check out [!installation instructions](https://asciinema.org/a/Fq3MIf5SOsNherS637GQw66um)
