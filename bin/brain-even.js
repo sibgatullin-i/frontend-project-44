@@ -4,7 +4,7 @@ import readlineSync from 'readline-sync';
 
 let successCounter = 0;
 
-export function brainEven(name, correctAnswersRequired) {
+export default function brainEven(name, correctAnswersRequired) {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   while (successCounter < correctAnswersRequired) {
     const randomNum = Math.floor(Math.random() * 1000);
