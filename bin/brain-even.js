@@ -24,5 +24,5 @@ export default function brainEven(name, correctAnswersRequired) {
       break;
     }
   }
-  return successCounter === 3;
+  return successCounter === correctAnswersRequired;
 }
