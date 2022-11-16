@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import * as cli from '../src/cli.js';
-import readlineSync from 'readline-sync';
 import brainEven from '../bin-games/brain-even.js';
 import brainCalc from '../bin-games/brain-calc.js';
 import brainGCD from '../bin-games/brain-gcd.js';

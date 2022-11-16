@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import {checkAnswer} from '../src/cli.js';
-
+import { checkAnswer } from '../src/cli.js';
 
 let successCounter = 0;
 const progressionLength = 10;
@@ -22,7 +21,7 @@ export default function brainProgression(name, correctAnswersRequired) {
     progression[randomItemIndex] = '..';
     console.log(`Question: ${progression.join(' ')}`);
     const userAnswer = Number(readlineSync.question('Your answer: '));
-    if (checkAnswer(userAnswer, correctAnswer)){
+    if (checkAnswer(userAnswer, correctAnswer)) {
       successCounter += 1;
     } else { break; }
   }

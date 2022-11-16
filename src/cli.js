@@ -6,7 +6,7 @@ export function userGreet() {
   return name;
 }
 
-export function checkAnswer (userAnswer, correctAnswer) {
+export function checkAnswer(userAnswer, correctAnswer) {
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
   } else {
@@ -15,6 +15,6 @@ export function checkAnswer (userAnswer, correctAnswer) {
   return userAnswer === correctAnswer;
 }
 
-export function endgameMessage (name, state) {
+export function endgameMessage(name, state) {
   console.log(state ? `Congratulations, ${name}!` : `Better luck next time, ${name}!`);
-};
+}

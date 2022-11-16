@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import {checkAnswer} from '../src/cli.js';
+import { checkAnswer } from '../src/cli.js';
 
 let successCounter = 0;
 
@@ -25,7 +25,7 @@ export default function brainCalc(name, correctAnswersRequired) {
     }
     console.log(`Question: ${randomNum1} ${randomOperator} ${randomNum2} = ?`);
     const userAnswer = Number(readlineSync.question('Your answer: '));
-    if (checkAnswer(userAnswer, correctAnswer)){
+    if (checkAnswer(userAnswer, correctAnswer)) {
       successCounter += 1;
     } else { break; }
   }
