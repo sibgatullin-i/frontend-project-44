@@ -6,4 +6,13 @@ export function userGreet() {
   return name;
 }
 
+export function checkAnswer (userAnswer, correctAnswer) {
+  if (userAnswer === correctAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+  }
+  return userAnswer === correctAnswer;
+}
+
 export function dummy() {}

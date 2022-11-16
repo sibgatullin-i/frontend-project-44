@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
+import {checkAnswer} from '../src/cli.js';
 
 let successCounter = 0;
 
@@ -15,13 +16,9 @@ export default function brainPrime(name, correctAnswersRequired) {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     console.log(`Question: ${questionNumber}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === correctAnswer) {
-      console.log('Correct');
+    if (checkAnswer(userAnswer, correctAnswer)){
       successCounter += 1;
-    } else {
-      console.log(`Answer "${userAnswer}" is incorrect. Correct answer was "${correctAnswer}".`);
-      break;
-    }
+    } else { break; }
   }
   return successCounter === correctAnswersRequired;
 }

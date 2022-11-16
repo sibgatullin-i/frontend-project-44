@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
+import {checkAnswer} from '../src/cli.js';
 
 let successCounter = 0;
 
@@ -24,13 +25,9 @@ export default function brainCalc(name, correctAnswersRequired) {
     }
     console.log(`Question: ${randomNum1} ${randomOperator} ${randomNum2} = ?`);
     const userAnswer = Number(readlineSync.question('Your answer: '));
-    if (userAnswer === correctAnswer) {
+    if (checkAnswer(userAnswer, correctAnswer)){
       successCounter += 1;
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-      break;
-    }
+    } else { break; }
   }
   return successCounter === correctAnswersRequired;
 }
