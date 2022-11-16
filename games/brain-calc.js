@@ -6,7 +6,7 @@ import { checkAnswer } from '../src/cli.js';
 let successCounter = 0;
 
 export default function brainCalc(name, correctAnswersRequired) {
-  console.log('Calculate following equations correctly.');
+  console.log('What is the result of the expression?');
   while (successCounter < correctAnswersRequired) {
     const randomNum1 = Math.floor(Math.random() * 10);
     const randomNum2 = Math.floor(Math.random() * 10);
