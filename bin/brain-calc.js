@@ -10,19 +10,19 @@ export default function brainCalc(name, correctAnswersRequired) {
     const randomNum1 = Math.floor(Math.random() * 10);
     const randomNum2 = Math.floor(Math.random() * 10);
     const operatorRandomSeed = Math.random();
-    let randomOper = '';
+    let randomOperator = '';
     let correctAnswer = 0;
     if (operatorRandomSeed >= 0.66) {
-      randomOper = '*';
+      randomOperator = '*';
       correctAnswer = randomNum1 * randomNum2;
     } else if (operatorRandomSeed <= 0.33) {
-      randomOper = '+';
+      randomOperator = '+';
       correctAnswer = randomNum1 + randomNum2;
     } else {
-      randomOper = '-';
+      randomOperator = '-';
       correctAnswer = randomNum1 - randomNum2;
     }
-    console.log(`Question: ${randomNum1} ${randomOper} ${randomNum2} = ?`);
+    console.log(`Question: ${randomNum1} ${randomOperator} ${randomNum2} = ?`);
     const userAnswer = Number(readlineSync.question('Your answer: '));
     if (userAnswer === correctAnswer) {
       successCounter += 1;
