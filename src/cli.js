@@ -19,5 +19,5 @@ export function checkAnswer(userAnswer, correctAnswer) {
 
 export function endgameMessage(name, state) {
   console.log(state ? `Congratulations, ${name}!` : `Better luck next time, ${name}!`);
-  console.log(`Let's try again, ${name}`);
+  console.log(`Let's try again, ${name}!`);
 }
