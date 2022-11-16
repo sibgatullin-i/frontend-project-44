@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+export const correctAnswersRequired = 3;
+
 export function userGreet() {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
