@@ -2,11 +2,11 @@
 
 import * as cli from '../src/cli.js';
 import readlineSync from 'readline-sync';
-import brainEven from '../bin/brain-even.js';
-import brainCalc from '../bin/brain-calc.js';
-import brainGCD from '../bin/brain-gcd.js';
-import brainProgression from '../bin/brain-progression.js';
-import brainPrime from '../bin/brain-prime.js';
+import brainEven from '../bin-games/brain-even.js';
+import brainCalc from '../bin-games/brain-calc.js';
+import brainGCD from '../bin-games/brain-gcd.js';
+import brainProgression from '../bin-games/brain-progression.js';
+import brainPrime from '../bin-games/brain-prime.js';
 
 const correctAnswersRequired = 3; // you may later change it. Or even ask user to select
 
