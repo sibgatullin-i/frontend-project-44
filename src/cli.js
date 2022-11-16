@@ -15,4 +15,6 @@ export function checkAnswer (userAnswer, correctAnswer) {
   return userAnswer === correctAnswer;
 }
 
-export function dummy() {}
+export function endgameMessage (name, state) {
+  console.log(state ? `Congratulations, ${name}!` : `Better luck next time, ${name}!`);
+};
