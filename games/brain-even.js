@@ -5,7 +5,7 @@ import { checkAnswer } from '../src/cli.js';
 
 let successCounter = 0;
 
-export default function brainEven(name, correctAnswersRequired) {
+export default function brainEven(correctAnswersRequired) {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   while (successCounter < correctAnswersRequired) {
     const randomNum = Math.floor(Math.random() * 1000);

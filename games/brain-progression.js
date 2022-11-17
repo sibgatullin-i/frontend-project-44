@@ -7,7 +7,7 @@ let successCounter = 0;
 const progressionLength = 10;
 const progressionDifficulty = 10;
 
-export default function brainProgression(name, correctAnswersRequired) {
+export default function brainProgression(correctAnswersRequired) {
   console.log('What number is missing in the progression?');
   while (successCounter < correctAnswersRequired) {
     const randomSeed = Math.floor(Math.random() * progressionDifficulty + 1);

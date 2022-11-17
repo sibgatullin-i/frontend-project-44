@@ -4,4 +4,4 @@ import * as cli from '../src/cli.js';
 import brainGCD from '../games/brain-gcd.js';
 
 const name = cli.userGreet();
-cli.endgameMessage(name, brainGCD(name, cli.correctAnswersRequired));
+cli.endgameMessage(name, brainGCD(cli.correctAnswersRequired));

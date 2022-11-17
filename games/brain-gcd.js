@@ -20,7 +20,7 @@ const calculateGCD = (i1, i2) => {
   return a;
 };
 
-export default function brainGCD(name, correctAnswersRequired) {
+export default function brainGCD(correctAnswersRequired) {
   console.log('Find the greatest common divisor of given numbers.');
   while (successCounter < correctAnswersRequired) {
     const randomNum1 = Math.floor(Math.random() * 100) + 1;
