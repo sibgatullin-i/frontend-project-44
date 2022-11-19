@@ -4,7 +4,7 @@ import readlineSync from 'readline-sync';
 import { checkAnswer } from '../src/cli.js';
 
 let successCounter = 0;
-const multiplier = 10;
+const multiplier = 10; // you may adjust it to really test yourself
 
 export default function brainCalc(correctAnswersRequired) {
   console.log('What is the result of the expression?');
