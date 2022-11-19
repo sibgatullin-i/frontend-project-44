@@ -20,7 +20,7 @@ npm install readline-sync
 ```
 3. Now you may run Brain Games from local folder or install it system-wise:
 ```bash
-npm link
+npm ci
 ```
 
 ## Usage

@@ -4,12 +4,15 @@ import readlineSync from 'readline-sync';
 import { checkAnswer } from '../src/cli.js';
 
 let successCounter = 0;
+const multiplier = 10;
 
 export default function brainCalc(correctAnswersRequired) {
   console.log('What is the result of the expression?');
   while (successCounter < correctAnswersRequired) {
-    const randomNum1 = Math.floor(Math.random() * 10);
-    const randomNum2 = Math.floor(Math.random() * 10);
+    const randomValue1 = Math.random() * multiplier; // this is done to reduce "code smells" by CodeClimate
+    const randomValue2 = Math.random() * multiplier;
+    const randomNum1 = Math.floor(randomValue1);
+    const randomNum2 = Math.floor(randomValue2);
     const operatorRandomSeed = Math.random();
     let randomOperator = '';
     let correctAnswer = 0;
