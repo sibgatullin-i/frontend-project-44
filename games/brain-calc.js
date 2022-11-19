@@ -10,7 +10,7 @@ export default function brainCalc(correctAnswersRequired) {
   console.log('What is the result of the expression?');
   while (successCounter < correctAnswersRequired) {
     const randomNumbers = [];
-    for (let i = 0; i < 2 ; i += 1) {
+    for (let i = 0; i < 2; i += 1) {
       randomNumbers.push(Math.random());
       randomNumbers[i] *= multiplier;
       randomNumbers[i] = Math.floor(randomNumbers[i]);
