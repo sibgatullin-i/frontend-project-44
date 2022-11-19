@@ -9,24 +9,26 @@ const multiplier = 10;
 export default function brainCalc(correctAnswersRequired) {
   console.log('What is the result of the expression?');
   while (successCounter < correctAnswersRequired) {
-    const randomValue1 = Math.random() * multiplier; // this is done to reduce "code smells" by CodeClimate
-    const randomValue2 = Math.random() * multiplier;
-    const randomNum1 = Math.floor(randomValue1);
-    const randomNum2 = Math.floor(randomValue2);
+    const randomNumbers = [];
+    for (let i = 0; i < 2 ; i += 1) {
+      randomNumbers.push(Math.random());
+      randomNumbers[i] *= multiplier;
+      randomNumbers[i] = Math.floor(randomNumbers[i]);
+    }
     const operatorRandomSeed = Math.random();
     let randomOperator = '';
     let correctAnswer = 0;
     if (operatorRandomSeed >= 0.66) {
       randomOperator = '*';
-      correctAnswer = randomNum1 * randomNum2;
+      correctAnswer = randomNumbers[0] * randomNumbers[1];
     } else if (operatorRandomSeed <= 0.33) {
       randomOperator = '+';
-      correctAnswer = randomNum1 + randomNum2;
+      correctAnswer = randomNumbers[0] + randomNumbers[1];
     } else {
       randomOperator = '-';
-      correctAnswer = randomNum1 - randomNum2;
+      correctAnswer = randomNumbers[0] - randomNumbers[1];
     }
-    console.log(`Question: ${randomNum1} ${randomOperator} ${randomNum2} = ?`);
+    console.log(`Question: ${randomNumbers[0]} ${randomOperator} ${randomNumbers[1]} = ?`);
     const userAnswer = Number(readlineSync.question('Your answer: '));
     if (checkAnswer(userAnswer, correctAnswer)) {
       successCounter += 1;
