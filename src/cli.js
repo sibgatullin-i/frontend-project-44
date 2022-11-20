@@ -32,7 +32,7 @@ export function randomItem(array) {
   return null;
 }
 
-export function getGCD (i1, i2) {
+export function getGCD(i1, i2) {
   let a = i1;
   let b = i2;
   while (a !== 0 && b !== 0) {
@@ -45,4 +45,4 @@ export function getGCD (i1, i2) {
   }
   a += b;
   return a;
-};
+}
