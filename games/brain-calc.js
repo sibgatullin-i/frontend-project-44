@@ -13,7 +13,7 @@ export default function brainCalc(correctAnswersRequired) {
     for (let i = 0; i < 2; i += 1) {
       randomNumbers.push(Math.random());
       randomNumbers[i] *= multiplier;
-      randomNumbers[i] = Math.floor(randomNumbers[i]);  
+      randomNumbers[i] = Math.floor(randomNumbers[i]);
     }
     const randomOperator = randomItem(['+', '-', '*']);
     let correctAnswer = 0;
