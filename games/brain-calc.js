@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import { checkAnswer } from '../src/cli.js';
+import { checkAnswer, randomItem } from '../src/cli.js';
 
 let successCounter = 0;
 
@@ -10,7 +10,7 @@ export default function brainCalc(correctAnswersRequired) {
   while (successCounter < correctAnswersRequired) {
     const randomNum1 = Math.floor(Math.random() * 10);
     const randomNum2 = Math.floor(Math.random() * 10);
-    const operatorRandomSeed = Math.random();
+    /* const operatorRandomSeed = Math.random();
     let randomOperator = '';
     let correctAnswer = 0;
     if (operatorRandomSeed >= 0.66) {
@@ -22,7 +22,12 @@ export default function brainCalc(correctAnswersRequired) {
     } else {
       randomOperator = '-';
       correctAnswer = randomNum1 - randomNum2;
-    }
+    } */
+    const randomOperator = randomItem(['+', '-', '*']);
+    let correctAnswer = 0;
+    correctAnswer = randomOperator === '+' ? randomNum1 + randomNum2 : correctAnswer;
+    correctAnswer = randomOperator === '-' ? randomNum1 - randomNum2 : correctAnswer;
+    correctAnswer = randomOperator === '*' ? randomNum1 * randomNum2 : correctAnswer;
     console.log(`Question: ${randomNum1} ${randomOperator} ${randomNum2} = ?`);
     const userAnswer = Number(readlineSync.question('Your answer: '));
     if (checkAnswer(userAnswer, correctAnswer)) {
