@@ -9,8 +9,10 @@ const multiplier = 10; // you may adjust it to really test yourself
 export default function brainCalc(correctAnswersRequired) {
   console.log('What is the result of the expression?');
   while (successCounter < correctAnswersRequired) {
-    const randomNum1 = Math.floor(Math.random() * 10);
-    const randomNum2 = Math.floor(Math.random() * 10);
+    const randomValue1 = Math.random() * multiplier;
+    const randomValue2 = Math.random() * multiplier;
+    const randomNum1 = Math.floor(randomValue1);
+    const randomNum2 = Math.floor(randomValue2);
     /* const operatorRandomSeed = Math.random();
     let randomOperator = '';
     let correctAnswer = 0;
@@ -23,7 +25,12 @@ export default function brainCalc(correctAnswersRequired) {
     } else {
       randomOperator = '-';
       correctAnswer = randomNum1 - randomNum2;
-    }
+    } */
+    const randomOperator = randomItem(['+', '-', '*']);
+    let correctAnswer = 0;
+    correctAnswer = randomOperator === '+' ? randomNum1 + randomNum2 : correctAnswer;
+    correctAnswer = randomOperator === '-' ? randomNum1 - randomNum2 : correctAnswer;
+    correctAnswer = randomOperator === '*' ? randomNum1 * randomNum2 : correctAnswer;
     console.log(`Question: ${randomNum1} ${randomOperator} ${randomNum2} = ?`);
     const userAnswer = Number(readlineSync.question('Your answer: '));
     if (checkAnswer(userAnswer, correctAnswer)) {

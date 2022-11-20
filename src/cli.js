@@ -25,7 +25,7 @@ export function endgameMessage(name, state) {
 export function randomItem(array) {
   const randomSeed = Math.random();
   for (let i = 1; i <= array.length; i += 1) {
-    if (randomSeed < (i / array.length)) {
+    if (randomSeed <= (i / array.length)) {
       return array[i - 1];
     }
   }
