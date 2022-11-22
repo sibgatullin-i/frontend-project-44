@@ -4,12 +4,13 @@ import readlineSync from 'readline-sync';
 import { checkAnswer, getGCD } from '../src/cli.js';
 
 let successCounter = 0;
+const multiplier = 100; // adjust this to really test yourself
 
 export default function brainGCD(correctAnswersRequired) {
   console.log('Find the greatest common divisor of given numbers.');
   while (successCounter < correctAnswersRequired) {
-    const randomNum1 = Math.floor(Math.random() * 100) + 1;
-    const randomNum2 = Math.floor(Math.random() * 100) + 1;
+    const randomNum1 = Math.floor(Math.random() * multiplier) + 1; // +1 to avoid zero
+    const randomNum2 = Math.floor(Math.random() * multiplier) + 1;
     console.log(randomNum1, randomNum2);
     const correctAnswer = getGCD(randomNum1, randomNum2);
     console.log(`Question: ${randomNum1} ${randomNum2}`);
