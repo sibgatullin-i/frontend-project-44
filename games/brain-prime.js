@@ -12,7 +12,7 @@ const primeNumbers = [...primeNumbersPart1, ...primeNumbersPart2]; // the line w
 export default function brainPrime(correctAnswersRequired) {
   while (successCounter < correctAnswersRequired) {
     const randomSeed = (Math.random() > 0.5 ? 1 : 0);
-    const randomItemIndex = Math.abs(Math.floor(Math.random() * primeNumbers.length - 1));
+    const randomItemIndex = Math.abs(Math.floor(Math.random() * (primeNumbers.length - 1)));
     const questionNumber = primeNumbers[randomItemIndex] + randomSeed;
     const correctAnswer = primeNumbers.includes(questionNumber) ? 'yes' : 'no';
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
