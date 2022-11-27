@@ -26,7 +26,7 @@ npm ci
 ## Usage
 
 ```bash
-node bin\brain-games.js
+node bin/brain-games.js
 ```
 or, if you have installed it system-wise
 ```bash
