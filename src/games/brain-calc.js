@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import { checkAnswer, randomItem } from '../src/cli.js';
+import { checkAnswer, selectRandomItem } from '../cli.js';
 
 let successCounter = 0;
 const multiplier = 10; // you may adjust it to really test yourself
@@ -15,7 +15,7 @@ export default function brainCalc(correctAnswersRequired) {
       randomNumbers[i] *= multiplier;
       randomNumbers[i] = Math.floor(randomNumbers[i]);
     }
-    const randomOperator = randomItem(['+', '-', '*']);
+    const randomOperator = selectRandomItem(['+', '-', '*']);
     let correctAnswer = 0;
     correctAnswer = randomOperator === '+' ? randomNumbers[0] + randomNumbers[1] : correctAnswer;
     correctAnswer = randomOperator === '-' ? randomNumbers[0] - randomNumbers[1] : correctAnswer;

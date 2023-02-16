@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 export const correctAnswersRequired = 3;
 
-export function userGreet() {
+export function greetUser() {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
   return name;
@@ -22,7 +22,7 @@ export function endgameMessage(name, state) {
   console.log(`Let's try again, ${name}!`);
 }
 
-export function randomItem(array) {
+export function selectRandomItem(array) {
   const randomSeed = Math.random();
   for (let i = 1; i <= array.length; i += 1) {
     if (randomSeed <= (i / array.length)) {

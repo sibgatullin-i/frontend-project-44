@@ -3,4 +3,4 @@
 import * as cli from '../src/cli.js';
 
 console.log('Welcome to the Brain Games!');
-cli.userGreet();
+cli.greetUser();

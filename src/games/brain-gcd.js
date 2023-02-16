@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import { checkAnswer, getGCD } from '../src/cli.js';
+import { checkAnswer, getGCD } from '../cli.js';
 
 let successCounter = 0;
 const multiplier = 100; // adjust this to really test yourself
