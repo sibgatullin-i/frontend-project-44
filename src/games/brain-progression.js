@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import { checkAnswer } from '../src/cli.js';
+import { checkAnswer } from '../cli.js';
 
 let successCounter = 0;
 const progressionLength = 10;
