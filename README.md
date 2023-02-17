@@ -5,7 +5,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ded8b42c1766373df13d/maintainability)](https://codeclimate.com/github/sibgatullin-i/frontend-project-44/maintainability)
 
 # Brain Games
-
+ .
 Brain Games is an study project. It consists of several games.
 
 ## Installation
