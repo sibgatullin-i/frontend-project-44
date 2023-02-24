@@ -10,17 +10,12 @@ Brain Games is an study project. It consists of several games.
 
 ## Installation
 
-1. Clone Git-repository to you local computer:
+Clone repository to a local pc and run these commands in the root of the folder.
+
 ```bash
 git clone https://github.com/sibgatullin-i/frontend-project-44.git
-```
-2. Brain Games uses ```readline-sync``` library. You should install it prior to running Brain Games:
-```bash
-npm install readline-sync
-```
-3. Now you may run Brain Games from local folder or install it system-wise:
-```bash
-npm ci
+make install
+npm link
 ```
 
 ## Usage
